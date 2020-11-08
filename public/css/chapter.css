@@ -1,0 +1,82 @@
+#chapters
+{
+	display:flex;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	justify-content: space-between;
+}
+
+.billets
+{
+	border: 20px solid #fff;
+	width:40%;
+	background-image: url("../images/fond.png");
+	height:250px;
+	padding:10px;
+	margin:auto;
+	border-radius: 10px;
+	margin-bottom:20px;
+}
+
+ .billets:first-child 
+{
+	background-image: url("../images/chalet.jpg");
+	background-repeat: no-repeat ;
+	background-position: center center;
+	background-size: cover;
+}
+
+.billets p
+{
+	text-align: center;
+	padding:10px;
+}
+
+
+.billets h2
+{
+	text-align: center;
+	font-style: italic;
+}
+
+.bouton
+{
+	background-color: #496672;
+	margin-left:40%;
+	padding:10px;
+	color:white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.retour
+{
+	border:2px solid black;
+	background-color: #1f5cff;
+	margin-left:40%;
+	padding:10px;
+	color:white;
+}
+
+.commentaires
+{
+	margin:30px;
+}
+
+.comments
+{
+	width:30%;
+}
+.contenu_comments
+{
+	border:2px solid white;
+	background-color: lightgrey;
+	color:black;
+	padding:30px;
+	margin-top: 20px;
+}
+
+.contenu:hover
+{
+	background-color: white;
+}

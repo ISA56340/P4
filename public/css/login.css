@@ -1,0 +1,51 @@
+/*loginView*/
+#formulaire
+{
+	width:50%;
+	margin:auto;
+	font-size:1.2rem;
+	text-align:center;
+}	
+
+.form
+{
+	border: 1px solid ##064aff;
+}
+
+
+#formulaire h3
+{
+	font-size:34px;
+	margin:100px 0;
+	color:#00aaff;
+	text-shadow: 4px 3px 3px black; 
+}
+
+#formulaire input
+{
+	width:60%;
+	height:48px;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	padding-left:10px;
+}
+
+.button
+{
+	cursor:pointer;
+	background-color: #00aaff;
+	margin-bottom:100px;
+	margin-top:50px;
+	color:white;
+}
+
+/*allCommentsView*/
+.contenu_comments span
+{
+	color:#d882ad;
+}
+
+.contenu_comments h4
+{
+	text-align: center;
+}
