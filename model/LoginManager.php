@@ -15,7 +15,7 @@ class LoginManager extends Database
       $check = false;
       if (!empty($pseudo) && !empty($password))
       {   
-          $req = $db->prepare('SELECT id, password FROM user WHERE pseudo = :pseudo');
+          $req = $db->prepare('SELECT id, password, type FROM user WHERE pseudo = :pseudo');
           $req-> execute(['pseudo' => $pseudo]);
 
           $result = $req->fetch(); //converti le résultat en un tableau
@@ -26,6 +26,7 @@ class LoginManager extends Database
            $hashpass = $result['password'];
            if(password_verify($password, $hashpass))
             {
+              $_SESSION['user_type'] = $result['type'];
               $check = true;
             }
           }  
@@ -42,4 +43,14 @@ class LoginManager extends Database
       }
       return $check;
   } 
+
+   public function signinCheck($pseudo, $password) {
+    // Insertion
+      $hashpass = password_hash($password, PASSWORD_DEFAULT);
+      $db = $this->getConnection();
+      $req = $db->prepare('INSERT INTO user(pseudo, password,creation_date) VALUES(:pseudo, :password, NOW())');
+      $req->execute(array(
+        'pseudo' => $pseudo,
+        'password' => $hashpass));
+    }
 }

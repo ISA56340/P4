@@ -44,6 +44,10 @@ require_once ('controller/LoginController.php');
                         $commentController = new CommentController();
                         $commentController->deleteComment($_GET['commentId']);
                 }
+                 elseif($_GET['action'] === 'signin'){
+                    $loginController = new LoginController();
+                    $loginController->signin($_POST['pseudo'], $_POST['password1'], $_POST['password2']);
+                }
                 elseif($_GET['action'] === 'login'){
                     $loginController = new LoginController();
                     $loginController->login($_POST['pseudo'], $_POST['mypassword']);
@@ -92,7 +96,7 @@ require_once ('controller/LoginController.php');
         }
         catch (Exception $e)
         {
-            echo 'Erreur :' .$e->getMessage();
+            echo 'Erreur : ' .$e->getMessage();
         }
 
 

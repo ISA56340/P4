@@ -40,7 +40,7 @@ class CommentController
 		$commentManager = new CommentManager();
 		$reportComment = $commentManager->reportComment($commentId);
     header('Location:index.php?action=lastChapters');
-    //echo "<script>alert(\"Commentaire signalé !\")</script>";
+    echo "<script>alert(\"Commentaire signalé !\")</script>";
 	}
 
 /*affiche tous les com signalés pour le modérateur*/

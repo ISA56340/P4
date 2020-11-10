@@ -31,10 +31,14 @@ class ChapterController
 
 	function adminUpdateChapter()
 	{
-		$chapterManager = new ChapterManager();
-    	$allChapters = $chapterManager->getAdminChapters();
+		if($_SESSION['user_type'] == 1) {
+			$chapterManager = new ChapterManager();
+	    	$allChapters = $chapterManager->getAdminChapters();
 
-		require_once('view/adminView.php');
+			require_once('view/adminView.php');
+		} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 
 /*afficher un chapitre et commentaires associés*/	
@@ -52,9 +56,12 @@ class ChapterController
 /*affiche la vue qui permet de créer nouveau chapitre*/
 	function newChapter()
 	{
-		$chapterManager = new ChapterManager();
-		require_once('view/newChapterView.php');
-		
+		if($_SESSION['user_type'] == 1) {
+    		$chapterManager = new ChapterManager();
+			require_once('view/newChapterView.php');
+    	} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 
 	function addChapter()
@@ -67,31 +74,43 @@ class ChapterController
 
 	function deleteChapter($chapterId)
 	{
-		$chapterManager = new ChapterManager();
-		$chapter = $chapterManager->deleteChapter($chapterId);
-		header('Location: index.php?action=lastChapters');
+		if($_SESSION['user_type'] == 1) {
+    		$chapterManager = new ChapterManager();
+			$chapter = $chapterManager->deleteChapter($chapterId);
+			$_SESSION['alert'] = "Chapitre #" . $chapterId . " supprimé";
+			header('Location: index.php?action=lastChapters');
+    	} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 
 /*récupère et affiche dans la vue un chapitre pour pouvoir le modifier*/
 	function updateChapterView($chapterId)
 	{
-		$chapterManager = new ChapterManager();
-    	$chapter = $chapterManager->getChapter($chapterId);	
-		//var_dump($_GET['chapterId']);
-    	require_once('view/adminChapterView.php');
-		
+		if($_SESSION['user_type'] == 1) {
+    		$chapterManager = new ChapterManager();
+	    	$chapter = $chapterManager->getChapter($chapterId);	
+			//var_dump($_GET['chapterId']);
+	    	require_once('view/adminChapterView.php');
+    	} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 
 /*modifier chapitre*/
 	function updateChapter($title,$content,$chapterId)
 	{
-    	$chapterManager = new ChapterManager();
-    	$updateChapter = $chapterManager->updateChapter($title,$content,$chapterId);
-    	if($updateChapter){
-			header('Location: index.php?action=lastChapters');
-		}else{
-			throw new Exception("Impossible modifier le chapitre");
-			
-		}	
+		if($_SESSION['user_type'] == 1) {
+	    	$chapterManager = new ChapterManager();
+	    	$updateChapter = $chapterManager->updateChapter($title,$content,$chapterId);
+	    	if($updateChapter){
+	    		$_SESSION['alert'] = "Chapitre #" . $chapterId . " mis à jour";
+				header('Location: index.php?action=lastChapters');
+			} else {
+				throw new Exception("Impossible modifier le chapitre");	
+			}
+		} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 }

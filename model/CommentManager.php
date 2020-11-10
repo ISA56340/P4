@@ -29,7 +29,9 @@ class CommentManager extends Database
     {
         $db = $this->getConnection();
         $result = $db->prepare('UPDATE comment SET report= report+1 WHERE id=:id');
-        $result->execute(array($commentId));
+         $result->execute(array(
+                        'id'=>$commentId
+                        ));
         return $result;
     }
 

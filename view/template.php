@@ -30,9 +30,12 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 
 					<!--lien visible uniquement si  jf connecté-->
 						<?php if(isset($_SESSION) AND isset($_SESSION['connexion'])): ?>
-						<li><a href="index.php?action=logout">Deconnexion</a></li>
-						<li><a href="index.php?action=admin">Espace administration</a></li>
-						<?php else:?><li class='login'><a href="index.php?action=connection">Connexion</a></li>
+							<li><a href="index.php?action=logout">Deconnexion</a></li>
+							<?php if($_SESSION['user_type'] == 1): ?>
+								<li><a href="index.php?action=admin">Espace administration</a></li>
+							<?php endif; ?>
+						<?php else:?>
+							<li class='login'><a href="index.php?action=connection">Connexion</a></li>
 						<?php endif; ?>
 					</ul>
 				</div>
@@ -40,7 +43,11 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 				<h1> Billet simple pour l'Alaska</h1>
 				<h2> de Jean Forteroche</h2>
 			</header>
-
+			<?php if(isset($_SESSION) AND isset($_SESSION['alert'])): ?>
+				<div class="alert"><?php echo $_SESSION['alert'] ?></div>
+			<?php unset($_SESSION['alert']); 
+			endif; ?>
+			
 			<div class="content">
 			 	<?= $content ?>
 			 </div>

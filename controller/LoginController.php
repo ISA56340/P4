@@ -7,6 +7,25 @@ require_once('model/CommentManager.php');
 
 class LoginController
 {
+	function signin($pseudo, $password1, $password2)
+	{
+		//$hashpass = password_hash($password, PASSWORD_DEFAULT);
+	    $loginManager = new LoginManager;
+		// Vérification de la validité des informations
+		if (!empty($password1) && !empty($password2) && !empty($pseudo))
+		{ 
+	   		if($password1 == $password2){
+	    		$signin = $loginManager->signinCheck($pseudo, $password1);
+	    		$_SESSION['alert'] = "Bonjour ". $pseudo .", inscription réussie";
+	    		$_SESSION['connexion'] = $_POST['pseudo'] ;
+	    		header("Location:index.php?action=allChapters");
+			}
+			else{
+				throw new Exception("vos mots de passe ne sont pas identiques");
+			}
+			
+		}
+	}
 
 	function login($pseudo, $password)
 	{
@@ -20,10 +39,12 @@ class LoginController
 			}
 	    	if($check)
 	    	{	
-	    		//session_start();
 	        	$_SESSION['connexion'] = $_POST['pseudo'] ;
-	        	//header("Location:index.php");
-	        	require_once("view/adminView.php");
+	        	if($_SESSION['user_type'] == 1) {
+	        		header("Location:index.php?action=admin");
+	        	} else {
+	        		header("Location:index.php?action=allChapters");
+	        	}
 	    	}
 	    	else
 	   		{
@@ -37,7 +58,11 @@ class LoginController
 
 	function admin()
 	{
-		require_once("view/adminView.php");
+		if($_SESSION['user_type'] == 1) {
+    		require_once("view/adminView.php");
+    	} else {
+    		header("Location:index.php?action=allChapters");
+    	}
 	}
 
 	function connection()
@@ -46,13 +71,9 @@ class LoginController
 	}
 
 	function logout() {
-
-    // Suppression des variables de session et de la session
-    $_SESSION = array();
-    session_destroy();
-    header('Location: index.php');
-
-
-}
+	    // Suppression des variables de session et de la session
+	    session_destroy();
+	    header('Location: index.php');
+	}
 	
  }
