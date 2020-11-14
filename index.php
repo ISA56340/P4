@@ -50,7 +50,7 @@ require_once ('controller/LoginController.php');
                 }
                 elseif($_GET['action'] === 'updateComment'){
                         $commentController = new CommentController();
-                        $commentController->updateComment($_GET['commentId'],$_POST['author'], $_POST['comment']);
+                        $commentController->updateComment($_POST['author'], $_POST['comment'],$_GET['commentId']);
                 }
                  elseif($_GET['action'] === 'signin'){
                     $loginController = new LoginController();

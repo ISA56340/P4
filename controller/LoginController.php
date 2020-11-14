@@ -45,6 +45,13 @@ class LoginController
 	        	} else {
 	        		header("Location:index.php?action=allChapters");
 	        	}
+
+	        	$_SESSION['connexion'] = $_POST['pseudo'] ;
+	        	if($_SESSION['user_type'] == 0) {
+	        		header("Location:index.php?action=allChapters");
+	        	} else {
+	        		header("Location:index.php?action=connection");
+	        	}
 	    	}
 	    	else
 	   		{

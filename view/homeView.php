@@ -1,9 +1,10 @@
 <?php $title = 'Home'; ?> 
 
 <?php ob_start(); ?>
+    
 
-		<h3>Derniers chapitres mis en ligne</h3>
-        <div id="chapters">			
+	<h3>Derniers chapitres mis en ligne</h3>
+    <div id="chapters">			
 			<?php
             foreach ($listChapters as $id => $chapter) {
                 ?>

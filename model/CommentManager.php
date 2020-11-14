@@ -65,7 +65,7 @@ class CommentManager extends Database
     {   
         
         $db = $this->getConnection();
-        $result = $db->prepare('UPDATE comment SET author=:author, comment=:comment WHERE id=:id');
+        $result = $db->prepare('UPDATE comment SET author=:author,comment=:comment WHERE id=:id');
         
         $result->execute(array(
                     'author' => $author,
