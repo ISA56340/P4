@@ -52,5 +52,6 @@ class LoginManager extends Database
       $req->execute(array(
         'pseudo' => $pseudo,
         'password' => $hashpass));
+      $_SESSION['user_type'] = 0;
     }
 }

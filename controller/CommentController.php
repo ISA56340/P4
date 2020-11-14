@@ -39,8 +39,9 @@ class CommentController
 	{
 		$commentManager = new CommentManager();
 		$reportComment = $commentManager->reportComment($commentId);
-    header('Location:index.php?action=lastChapters');
-    echo "<script>alert(\"Commentaire signalé !\")</script>";
+		$_SESSION['alert'] = "Le commentaire a bien été signalé !";
+    	header('Location:index.php?action=lastChapters');
+ 		
 	}
 
 /*affiche tous les com signalés pour le modérateur*/
@@ -57,6 +58,34 @@ class CommentController
 	    $deleteComment = $commentManager->deleteComment($commentId);
 	  	 header('Location:index.php?action=allComments');
 	}
-		
+	
+	/*récupère et affiche dans la vue un commentaire pour pouvoir le modifier*/
+	function updateCommentView($commentId)
+	{
+		if($_SESSION['user_type'] == 1) {
+    		$commentManager = new CommentManager();
+	    	$comment = $commentManager->getComment($commentId);	
+	    	require_once('view/updateCommentView.php');
+    	} else {
+    		header("Location:index.php?action=allComments");
+    	}
+	}
+
+
+	/*modifier commentaire*/
+	function updateComment($author,$comment,$commentId)
+	{
+		if($_SESSION['user_type'] == 1) {
+	    	$commentManager = new CommentManager();
+	    	$updateComment = $commentManager->updateComment($author,$comment,$commentId);
+	    	if($updateComment){
+				header('Location:index.php?action=allComments');
+			} else {
+				throw new Exception("Impossible modifier le commentaire");	
+			}
+		} else {
+    		header("Location:index.php?action=allChapters");
+    	}
+	}	
 }
 

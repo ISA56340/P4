@@ -31,7 +31,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 					<!--lien visible uniquement si  jf connecté-->
 						<?php if(isset($_SESSION) AND isset($_SESSION['connexion'])): ?>
 							<li><a href="index.php?action=logout">Deconnexion</a></li>
-							<?php if($_SESSION['user_type'] == 1): ?>
+							<?php if(isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 1): ?>
 								<li><a href="index.php?action=admin">Espace administration</a></li>
 							<?php endif; ?>
 						<?php else:?>

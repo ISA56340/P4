@@ -20,7 +20,8 @@ $title = 'allCommentsView'; ?>
                     <p><strong>Auteur : </strong><?= htmlspecialchars($comment['author']);?></p>
                     <p><?= htmlspecialchars($comment['comment']);?></p>
                     <p><span>Ce commentaire a été signalé <?= nl2br(htmlspecialchars($comment['report'])) ?> fois.</span></p>
-                    <a href="index.php?action=deleteComment&amp;commentId=<?=$comment['id']?>" class="Supprimer">Supprimer le commentaire</a>                  
+                    <a href="index.php?action=deleteComment&amp;commentId=<?=$comment['id']?>" class="Supprimer">Supprimer le commentaire</a>
+                     <a href="index.php?action=updateComView&amp;commentId=<?=$comment['id']?>" class="Supprimer">modifier le commentaire</a>                  
                 </div> 
                 <?php
                 }

@@ -15,6 +15,15 @@ class CommentManager extends Database
         return $result;
     }
 
+    public function getComment($commentId)//récupère un commentaire précis grace au paramètre
+    {
+        $db = $this->getConnection();
+        $result = $db ->prepare('SELECT id,author, comment, comment_date FROM comment WHERE id = ?');
+        $result->execute([$commentId]);
+        $comment = $result->fetch();
+        return $comment;
+    }
+
     public function chapterComment($chapterId,$author,$comment)//poster un commentaire
     {
         $db = $this->getConnection();
@@ -38,7 +47,7 @@ class CommentManager extends Database
         public function allComments()
     {
         $db = $this->getConnection();
-        $result = $db->query('SELECT id, chapterId, author, comment, report, comment_date FROM comment where report >=1 ORDER BY comment_date DESC');
+        $result = $db->query('SELECT id, chapterId, author, comment, report, comment_date FROM comment where report >=3 ORDER BY comment_date DESC');
         return $result;;
     }
 
@@ -50,6 +59,23 @@ class CommentManager extends Database
         
         return $result; 
     }
+
+
+    public function updateComment($author,$comment,$commentId)//modifier un commentaire
+    {   
+        
+        $db = $this->getConnection();
+        $result = $db->prepare('UPDATE comment SET author=:author, comment=:comment WHERE id=:id');
+        
+        $result->execute(array(
+                    'author' => $author,
+                    'comment' => $comment,
+                    'id' => $commentId
+                    ));
+                                                                                        
+        
+       return $result;
+    }   
 
 }
 

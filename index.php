@@ -44,6 +44,14 @@ require_once ('controller/LoginController.php');
                         $commentController = new CommentController();
                         $commentController->deleteComment($_GET['commentId']);
                 }
+                 elseif($_GET['action'] == 'updateComView'){
+                    $commentController = new CommentController();
+                    $commentController->updateCommentView($_GET['commentId']);   
+                }
+                elseif($_GET['action'] === 'updateComment'){
+                        $commentController = new CommentController();
+                        $commentController->updateComment($_GET['commentId'],$_POST['author'], $_POST['comment']);
+                }
                  elseif($_GET['action'] === 'signin'){
                     $loginController = new LoginController();
                     $loginController->signin($_POST['pseudo'], $_POST['password1'], $_POST['password2']);

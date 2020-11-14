@@ -20,13 +20,6 @@ class ChapterManager extends Database
         return $result;
     }
 
-    public function getAdminChapters()
-    {
-        $db = $this->getConnection();
-        $result = $db->query('SELECT id, title FROM chapter ORDER BY id DESC');
-        return $result;
-    }
-
 	public function getChapter($chapterId)//récupère un chapitre précis grace au paramètre
 	{
 		$db = $this->getConnection();

@@ -48,7 +48,8 @@ class LoginController
 	    	}
 	    	else
 	   		{
-	   			echo 'Identifiant ou mot de passe incorrect';
+	   			$_SESSION['alert'] = "Identifiant ou mot de passe incorrect";
+	   			header("Location:index.php?action=connection");
 	   		}
 		} else {
 			echo 'Identifiant ou mot de passe incorrect';
