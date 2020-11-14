@@ -22,8 +22,9 @@
                 <div class="contenu_comments">
                     <h4><?= htmlspecialchars($comment['author']);?></h4>
                     <p>Posté le <?= htmlspecialchars($comment['comment_date']);?></p>
-                    <p><?= htmlspecialchars($comment['comment']);?></p>                   
-                    <a href="index.php?action=reportComment&id=<?=$chapter['id']?>&reportId=<?=$comment['id']?>" class="Signaler">Signaler le commentaire</a>
+                    <p><?= htmlspecialchars($comment['comment']);?></p>
+                    <?php if(isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 0): ?>        <a href="index.php?action=reportComment&id=<?=$chapter['id']?>&reportId=<?=$comment['id']?>" class="Signaler">Signaler le commentaire</a>
+                    <?php endif; ?>
                 </div> 
                 <?php
                 }
@@ -32,7 +33,9 @@
             </div>   
 		
     		<div class="your_comment">
-    			<a href="index.php?action=addComment&amp;chapterId=<?= $_GET['chapterId']?>" class="ajoutcomment">Ajouter un commentaire</a> 
+                <?php if(isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 0): ?>
+    			     <a href="index.php?action=addComment&amp;chapterId=<?= $_GET['chapterId']?>" class="ajoutcomment">Ajouter un commentaire</a>
+                <?php endif; ?> 
     		</div>
         </div>
 		
