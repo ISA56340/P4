@@ -9,7 +9,7 @@ class ChapterManager extends Database
 	public function getChapters()//récupère la liste des chapitres
 	{
 		$db = $this->getConnection();
-        $result = $db->query('SELECT id, title, content, creation_date FROM chapter ORDER BY id DESC LIMIT 0,3');
+        $result = $db->query('SELECT id, title, content, creation_date FROM chapter ORDER BY id DESC LIMIT 0,2');
         return $result;
 	}
 

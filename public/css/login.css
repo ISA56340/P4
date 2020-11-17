@@ -1,24 +1,25 @@
 /*loginView*/
 #formulaire
 {
-	width:50%;
-	margin:auto;
 	font-size:1.2rem;
 	text-align:center;
+	display:flex;
+	width:80%;
+	margin:auto;
 }	
 
-.form
+form
 {
-	border: 1px solid ##064aff;
+	width:40%;
+	margin:auto;
 }
 
 
 #formulaire h3
 {
 	font-size:34px;
-	margin:100px 0;
+	text-shadow: 1px 1px 1px black;
 	color:#00aaff;
-	text-shadow: 4px 3px 3px black; 
 }
 
 #formulaire input
@@ -38,6 +39,24 @@
 	margin-top:50px;
 	color:white;
 }
+
+/*espace administration*/
+.espace_admin
+{
+	display:flex;
+	width:70%;
+	margin:auto;
+}
+.espace_admin div
+ {
+ 	padding:20px;
+ 	margin:auto;
+ 	border:2px solid blue;
+ 	border-radius: 20px;
+ 	height:300px;
+ 	width:250px;
+ }
+
 
 /*allCommentsView*/
 .contenu_comments span

@@ -4,5 +4,95 @@ h3
 	font-size:34px;
 	margin:100px 0;
 	color:#00aaff;
-	text-shadow: 2px 2px 2px black; 
+	text-shadow: 1px 1px 1px black; 
+}
+
+.wrapper
+{
+	display: flex;
+	font-size: 1.2rem;
+	line-height: 2
+}
+
+.accueil
+{
+	margin:auto;
+	width:40%;
+	background-color: grey;
+	border-radius: 20px;
+}
+.accueil ul
+{
+	padding-left:0;
+}
+
+.accueil ul li
+{
+	list-style:none;
+	color:white;
+
+}
+
+.accueil article
+{
+	text-align:justify;
+	font-size:1.2rem;
+	font-weight: bold;
+	padding:30px;
+	color:white;
+}
+
+.last_chapters
+{
+	width:40%;
+	background-color: white;
+	margin:auto;
+	border-radius:20px;
+}
+
+.extrait 
+{
+	border: 20px solid #fff;
+	width:30%;
+	background-image: url("../images/fond.png");
+	background-repeat:  no-repeat;
+	background-size: cover;
+	margin:auto;
+	padding:30px;
+	margin-bottom:20px;
+}
+
+.extrait h2
+{
+	text-align:center;
+	font-size:1.2rem;
+}
+
+.extrait p span
+{
+	font-size:0.9rem;
+}
+
+.extrait p
+{
+	margin:auto;
+	margin-bottom: 20px;
+	font-size:1.1rem;
+}
+
+.extrait h4
+{
+	margin:0;
+	font-size:1.2rem;
+}
+
+.suite
+{
+	background-color: #496672;
+	margin-left:40%;
+	padding:10px;
+	color:white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size:1rem;
 }

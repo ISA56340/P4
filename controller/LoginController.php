@@ -43,15 +43,15 @@ class LoginController
 	        	if($_SESSION['user_type'] == 1) {
 	        		header("Location:index.php?action=admin");
 	        	} else {
-	        		header("Location:index.php?action=allChapters");
+	        		header("Location:index.php?action=lastChapters");
 	        	}
 
-	        	$_SESSION['connexion'] = $_POST['pseudo'] ;
+	        	/*$_SESSION['connexion'] = $_POST['pseudo'] ;
 	        	if($_SESSION['user_type'] == 0) {
 	        		header("Location:index.php?action=allChapters");
 	        	} else {
-	        		header("Location:index.php?action=connection");
-	        	}
+	        		//header("Location:index.php?action=connection");
+	        	}*/
 	    	}
 	    	else
 	   		{

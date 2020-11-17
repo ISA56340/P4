@@ -21,7 +21,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 						<img src="public/images/logo4.png" alt="logo">
 					</a>
 				</div>
-				<div id="nav">
+				<nav>
 					<ul>
 						<li><a href="index.php">Accueil</a></li>
 						<li><a href="index.php?action=allChapters">Tous les chapitres</a></li>
@@ -38,7 +38,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 							<li class='login'><a href="index.php?action=connection">Connexion</a></li>
 						<?php endif; ?>
 					</ul>
-				</div>
+				</nav>
 				
 				<h1> Billet simple pour l'Alaska</h1>
 				<h2> de Jean Forteroche</h2>

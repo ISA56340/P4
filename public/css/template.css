@@ -1,9 +1,9 @@
-
 body
 {
 	/*background-image: url("../images/fond.png");*/
-	margin:0px;
-	font-family: Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	font-family: Georgia,serif, Helvetica, sans-serif;
 	background-image: url("../images/img_lac.jpg") ;
 	background-attachment:fixed;
 	background-repeat: no-repeat ;
@@ -18,8 +18,8 @@ body
 header
 {
 	
-	width:100%;
-	height:250px;
+	/*width:100%;
+	height:250px;*/
 	margin-bottom: 50px;
 	position:relative;
 }
@@ -63,9 +63,8 @@ header h3
 }
 
 
-#nav
+nav
 {
-	position:relative;
 	width:100%;
 	height:80px;
 	background-color: white;
@@ -73,17 +72,17 @@ header h3
 	position: fixed;
 }
 
-#nav a:hover
+nav a:hover
 {
 	color:blue;
 }
 
-li
+nav li
 {
 	list-style-type: none;
 }
 
-ul
+nav ul
 {
 	display:flex;
 	flex-direction: row;
@@ -92,7 +91,7 @@ ul
 	width:100%;
 }
 
-ul a
+nav ul a
 {
 	color:#434a54;
 	padding:20px;
@@ -103,10 +102,9 @@ ul a
 
 .content
 {
-	margin:auto;
-	background-color:rgba(255,250,250,0.6);	
-	padding:20px; 
-	height:1000px;
+	background-color:rgba(255,250,250,0.8);	
+	padding:20px 0; 
+	height:auto;
 }
 
 .login
@@ -148,16 +146,11 @@ footer p
 	border-radius: 50px;
 }
 
-.logo_reseaux_sociaux img:nth-child(2)
-{
-	background-color:#c46659;
-}
-
 .infos
 {
 	background-color: aliceBlue;
 	height:80px;
-	border-radius: 10px;
+	border-radius: 50px;
 	padding:10px;
 	width:20%;
 	margin-right:100px;

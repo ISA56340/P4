@@ -5,8 +5,9 @@
         <div class="billets">
             <div class="img"></div>
         	<p>Publié le : <?= htmlspecialchars($chapter['creation_date']);?></p>
+            <h4>Chapitre <?= htmlspecialchars($chapter['id']);?></h4>
             <h2><?= htmlspecialchars($chapter['title']);?></h2>
-            <p><?= htmlspecialchars($chapter['content']);?></p>
+            <p><?= nl2br($chapter['content']);?></p>
             <a href="index.php">Retour à l'accueil</a>
 
         </div>

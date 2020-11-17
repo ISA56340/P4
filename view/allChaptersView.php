@@ -8,9 +8,10 @@
             foreach ($allChapters as $id => $chapter) {
                 ?>
             <div class="billets">
+                <img class="photo">
                 <h4>Chapitre <?= htmlspecialchars($chapter['id']);?></h4>
                 <h2><a href="index.php?action=chapter&amp;chapterId=<?= $chapter['id'] ?>"><?=htmlspecialchars($chapter['title']);?></a></h2> 
-                <p><?= htmlspecialchars($chapter['content']);?></p>
+                <p><?= nl2br(substr($chapter['content'], 0,300));?></p>
                 <p>Publié le : <?= htmlspecialchars($chapter['creation_date']);?></p>
                 <a href="index.php?action=chapter&amp;chapterId=<?= $chapter['id'] ?>"class="bouton">Lire la suite...</a> <!---on a rediriger vers le bon url via le routeur pour voir le chapitre en entier--->
                 
@@ -23,7 +24,7 @@
                         
                             
                 </div>
-                <br>
+                <br/>
                 <?php
             }
    			

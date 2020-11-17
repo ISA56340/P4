@@ -47,7 +47,7 @@ class CommentManager extends Database
         public function allComments()
     {
         $db = $this->getConnection();
-        $result = $db->query('SELECT id, chapterId, author, comment, report, comment_date FROM comment where report >=3 ORDER BY comment_date DESC');
+        $result = $db->query('SELECT id, chapterId, author, comment, report, comment_date FROM comment where report >=2 ORDER BY comment_date DESC');
         return $result;;
     }
 
