@@ -47,16 +47,34 @@ form
 	width:70%;
 	margin:auto;
 }
+
 .espace_admin div
  {
  	padding:20px;
  	margin:auto;
- 	border:2px solid blue;
+ 	border:2px solid #496672;
+ 	background-color: #496672;
  	border-radius: 20px;
- 	height:300px;
  	width:250px;
- }
+ 	text-align:center;
+ 	font-size: 1.2rem;
+ 	margin-bottom: 200px;
+ 	margin-top:100px;
+ 	box-shadow:5px 9px 5px gray,
+	-1px -1px 1px black;
+}
 
+.espace_admin div a
+{
+	text-decoration: none;
+	color:white;
+	font-size:1.3rem;
+}
+
+.espace_admin img
+{
+	padding:40px;	
+}
 
 /*allCommentsView*/
 .contenu_comments span
