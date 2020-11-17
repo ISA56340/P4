@@ -1,15 +1,17 @@
 <?php $title = 'Chapter'; ?> 
 
 <?php ob_start(); ?>
-        
+
         <div class="billets">
+            <div class="retour">
+                <a href="index.php" class="bouton">Retour à l'accueil</a>
+            </div>
             <div class="img"></div>
         	<p>Publié le : <?= htmlspecialchars($chapter['creation_date']);?></p>
             <h4>Chapitre <?= htmlspecialchars($chapter['id']);?></h4>
             <h2><?= htmlspecialchars($chapter['title']);?></h2>
             <p><?= nl2br($chapter['content']);?></p>
-            <a href="index.php">Retour à l'accueil</a>
-
+            
         </div>
         <br>
         
