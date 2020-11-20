@@ -77,6 +77,10 @@ form
 }
 
 /*allCommentsView*/
+.allComments .comments
+{
+	margin:auto;
+}
 .contenu_comments span
 {
 	color:#d882ad;
@@ -86,3 +90,46 @@ form
 {
 	text-align: center;
 }
+
+.contenu_comments a
+{
+	padding:10px;
+	text-decoration: none;
+	background-color: #00aaff;
+	color:white;
+	margin-left:30px;
+}
+
+/*updateCommentView*/
+#modifComment form
+{
+	padding:40px 10px;
+ 	border:2px solid #496672;
+ 	background-color: #496672;
+ 	border-radius: 20px;
+ 	text-align:center;
+ 	font-size: 1.2rem;
+ 	margin-bottom: 200px;
+ 	margin-top:100px;
+ 	box-shadow:5px 9px 5px gray,
+	-1px -1px 1px black;
+	height:300px;
+}
+
+#modifComment input
+{
+	width:40%;
+	padding:10px;
+}
+
+.update
+{
+	margin-top:40px;
+}
+
+.commentaire
+{
+	margin-top:20px;
+}
+
+/*newChapter*/

@@ -18,7 +18,7 @@
 		<div class="commentaires">
             <div class="comments">
 			    <h3>Commentaires</h3>
-            
+                 <p class="info">Si vous souhaitez signaler ou ajouter un commentaire, vous pouvez vous connecter ou créer votre espace <a href="index.php?action=connection"><span>ici</span></a></p>
                 <?php
                 foreach ($comments as $id=>$comment){
                 ?>

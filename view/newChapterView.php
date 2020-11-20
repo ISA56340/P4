@@ -11,8 +11,6 @@ require_once("controller/CommentController.php");
 $title = 'Create Chapter'; ?> 
 
 <?php ob_start(); ?>
-    <a href="index.php?">Déconnexion</a>
-  	
     <form method="post" action=" index.php?action=addChapter"?>        
        <label>Titre :<input type="text" id="title" name="title"/></label>
       <textarea id="newChapter" name="newChapter">

@@ -30,7 +30,6 @@ h3
 {
 	list-style:none;
 	color:white;
-
 }
 
 .accueil article
@@ -48,12 +47,14 @@ h3
 	background-color: white;
 	margin:auto;
 	border-radius:20px;
+	text-align:justify;
+	
 }
 
 .extrait 
 {
 	border: 20px solid #fff;
-	width:30%;
+	width:50%;
 	background-image: url("../images/fond.png");
 	background-repeat:  no-repeat;
 	background-size: cover;

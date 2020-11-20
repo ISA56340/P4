@@ -43,6 +43,7 @@ class LoginController
 	        	if($_SESSION['user_type'] == 1) {
 	        		header("Location:index.php?action=admin");
 	        	} else {
+	        		$_SESSION['alert'] = "Bonjour ". $pseudo .", connexion réussie";
 	        		header("Location:index.php?action=lastChapters");
 	        	}
 
@@ -59,7 +60,7 @@ class LoginController
 	   			header("Location:index.php?action=connection");
 	   		}
 		} else {
-			echo 'Identifiant ou mot de passe incorrect';
+			$_SESSION['alert'] = "Identifiant ou mot de passe incorrect";
 		}
 
 	}

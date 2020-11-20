@@ -7,7 +7,7 @@ $title = 'allCommentsView'; ?>
 
 <?php ob_start(); ?>
  
-<div class="commentaires">
+<div class="allComments">
             <div class="comments">
 			    <h3>Liste de tous les commentaires signalés</h3>
 

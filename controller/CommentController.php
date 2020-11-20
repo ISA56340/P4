@@ -80,6 +80,7 @@ class CommentController
 	    	$updateComment = $commentManager->updateComment($author,$comment,$commentId);
 	    	if($updateComment){
 				header('Location:index.php?action=allComments');
+				$_SESSION['alert'] = "Le commentaire a bien été modifié !";
 			} else {
 				throw new Exception("Impossible modifier le commentaire");	
 			}
