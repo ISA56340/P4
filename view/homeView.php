@@ -13,7 +13,9 @@
             </article>
             <article>
                 <p>Après avoir publié plusieurs romans sous forme traditionnelle, j'ai souhaité innover en publiant mon dernier roman en ligne, sur le modèle d'une série.<br/> Je vous propose donc de retrouver, ici même, chaque semaine un nouveau chapitre.<br/>J'espére que vous apprécierez cette nouvelle approche de publication et je vous encourage à me faire part de toutes vos remarques en laissant des commentaires.<br/>
-                <p>Chers lecteurs, prenez votre billet pour l'Alaska et laissez-vous embarquer vers le grand nord.<br/> Bonne lecture et bon voyage !</p>
+                <p>Chers lecteurs, prenez votre billet pour l'Alaska et laissez-vous embarquer vers le grand nord.<p/> 
+                <p>Bonne lecture et bon voyage !</p>
+                
             </article>
         </div>
     	

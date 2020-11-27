@@ -18,7 +18,7 @@ h4
 .billets
 {
 	border: 20px solid #fff;
-	width:40%;
+	width:60%;
 	background-image: url("../images/fond.png");
 	padding:10px;
 	margin:auto;
@@ -39,7 +39,6 @@ h4
 
 .billets p
 {
-	text-align: center;
 	line-height: 30px;
 	padding:20px;
 	text-align: justify;
@@ -88,4 +87,22 @@ h4
 .contenu:hover
 {
 	background-color: white;
+}
+
+/*version smartphone*/
+@media screen and (max-width: 880px) {
+	.billets
+	{
+		width:80%;
+	}
+
+	.comments
+	{ 
+		width:50%;
+		margin:auto;
+ 	}
+	.contenu_comments h4
+	{
+		font-size:1.2rem;
+	}
 }

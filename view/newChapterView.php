@@ -16,7 +16,7 @@ $title = 'Create Chapter'; ?>
       <textarea id="newChapter" name="newChapter">
     
       </textarea>
-      <input type="submit" value="Publier"/>
+      <input type="submit" class="publier" value="Publier"/>
     </form>
     
   	

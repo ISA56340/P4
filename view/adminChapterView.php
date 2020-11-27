@@ -10,7 +10,7 @@
       
   		<textarea id="newChapter" name="newChapter"> <?= htmlspecialchars($chapter['content']) ?></textarea>
       		
-      <input type="submit" value="Actualiser"/> 
+      <input type="submit" class="actualiser" value="Actualiser"/> 
     </form>
   </section>
 

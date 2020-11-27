@@ -11,6 +11,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 		<link rel="stylesheet" href="public/css/style.css"  type="text/css"/>
 		<meta name= "viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdn.tiny.cloud/1/vbl7evtg0dhgyajokozlbin5xayz3083upqby70jenjsq1oa/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 		<title><?= $title ?></title>
 	</head>
 
@@ -20,6 +21,10 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 					<a href="index.php">
 						<img src="public/images/logo4.png" alt="logo">
 					</a>
+				</div>
+				<div class="burger">
+					<button id="menu_burger"  title="ouvrir le menu">&#9776;</button> 
+	                <button id="croix_burger" title="fermer le menu">&#735;</button>  
 				</div>
 				<nav>
 					<ul>
@@ -63,5 +68,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 					<p>Politique de confidentialité</p>
 				</div>
 			</footer>
+		<script src="public/js/script.js"></script>
+
 	</body>
 </html>
