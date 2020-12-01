@@ -16,14 +16,14 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 		<meta property="og:title" content="Billet simple pour l'Alaska" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.surfing-web.com/Billet simple pour l'Alaska/" />
-		<meta property="og:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/images/logo.png" />
+		<meta property="og:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/public/images/logo4.png" />
 		<meta property="og:description" content="Dernier roman de Jean Forteroche"/>
 		<!--twitter_cards_ref_twitter-->
 		<meta name="twitter:card" content="summary"/>
 		<meta name="twitter:site" content="@Billet simple pour l'Alaska"/>
 		<meta name="twitter:title" content="Billet simple pour l'Alaska"/>
 		<meta name="twitter:description" content="Dernier roman de Jean Forteroche"/>
-		<meta name="twitter:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/images/logo.png"/>
+		<meta name="twitter:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/public/images/logo4.png"/>
 		<link rel="stylesheet" href="public/css/style.css"  type="text/css"/>
 	</head>
 
