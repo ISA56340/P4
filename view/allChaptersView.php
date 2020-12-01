@@ -19,8 +19,11 @@
                                    <!--liens visibles uniquement si  jf connecté-->
 
                 <?php if(isset($_SESSION) AND isset($_SESSION['connexion']) AND $_SESSION['user_type'] == 1): ?>
-                    <a href ="index.php?action=update&amp;chapterId=<?= $chapter['id'] ?>"class="bouton_admin">Modifier</a>
-                    <a href ="index.php?action=delete&amp;chapterId=<?= $chapter['id'] ?>"class="bouton_admin">Supprimer</a>
+                        <div class="bouton-admin">
+                            <a href ="index.php?action=update&amp;chapterId=<?= $chapter['id'] ?>"class="bouton_admin">Modifier</a>
+                        
+                            <a href ="index.php?action=delete&amp;chapterId=<?= $chapter['id'] ?>"class="bouton_admin">Supprimer</a>
+                        </div>
                 <?php endif; ?> 
                         
                             

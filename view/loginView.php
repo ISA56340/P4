@@ -1,5 +1,3 @@
-
-
 <?php $title = 'login'; ?> 
 
 <?php ob_start(); ?>

@@ -3,15 +3,15 @@
 {
 	font-size:1.2rem;
 	text-align:center;
-	display:flex;
-	width:80%;
+	width:90%;
 	margin:auto;
 }	
 
 form
 {
 	width:40%;
-	margin:auto;
+	display:inline-block;
+	vertical-align: text-top;
 }
 
 
@@ -20,14 +20,15 @@ form
 	font-size:34px;
 	text-shadow: 1px 1px 1px black;
 	color:#00aaff;
+	letter-spacing: 1px;
 }
 
 #formulaire input
 {
-	width:60%;
+	width:80%;
 	height:48px;
 	border-radius: 10px;
-	font-size: 1.1rem;
+	font-size: 0.8rem;
 	padding-left:10px;
 }
 
@@ -46,6 +47,7 @@ form
 	display:flex;
 	width:70%;
 	margin:auto;
+	flex-wrap: wrap;
 }
 
 .espace_admin div
@@ -55,10 +57,10 @@ form
  	border:2px solid #496672;
  	background-color: #496672;
  	border-radius: 20px;
- 	width:250px;
+ 	width:150px;
  	text-align:center;
  	font-size: 1.2rem;
- 	margin-bottom: 200px;
+ 	margin-bottom: 50px;
  	margin-top:100px;
  	box-shadow:5px 9px 5px gray,
 	-1px -1px 1px black;
@@ -74,6 +76,27 @@ form
 .espace_admin img
 {
 	padding:40px;	
+}
+
+.titre
+{
+	float:right;
+	
+}
+
+.bouton_admin
+{
+	background-color: #00aaff;
+	padding:10px;
+	color:white;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-left:10px;
+}
+
+.bouton_admin:hover
+{
+	transform: scale(1.1);
 }
 
 /*allCommentsView*/
@@ -101,19 +124,13 @@ form
 }
 
 /*updateCommentView*/
-#modifComment form
+.edition form
 {
-	padding:40px 10px;
- 	border:2px solid #496672;
- 	background-color: #496672;
- 	border-radius: 20px;
- 	text-align:center;
  	font-size: 1.2rem;
- 	margin-bottom: 200px;
- 	margin-top:100px;
- 	box-shadow:5px 9px 5px gray,
-	-1px -1px 1px black;
-	height:300px;
+ 	margin-bottom: 100px;
+ 	display:block;
+ 	margin:auto;
+ 	width:70%;
 }
 
 #modifComment input
@@ -135,7 +152,7 @@ form
 /*updateChapter*/
 #title
 {
-	width:100%;
+	width:99%;
 	height:40px;
 	font-size:1rem;
 	text-align: center;
@@ -155,6 +172,7 @@ form
 	border-radius: 5px;
 	width:150px;
 	margin-top:20px;
+	cursor:pointer;
 }
 
 .actualiser:hover
@@ -176,9 +194,31 @@ form
 	border-radius: 5px;
 	width:150px;
 	margin-top:20px;
+	cursor:pointer;
 }
 
 .publier:hover
 {
 	transform: scale(1.2);
+}
+
+/*version tablettePortrait*/
+@media screen and (max-width: 880px) {
+	form{
+		display:block;
+		margin:auto;
+		width:80%;
+	}
+
+	#formulaire input
+	{
+		width:60%;
+	}	
+}
+
+/*version smartphone*/
+@media screen and (max-width: 600px) {
+	form{
+		width:100%;
+	}
 }

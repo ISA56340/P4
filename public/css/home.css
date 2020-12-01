@@ -1,7 +1,7 @@
 h3
 {
 	text-align: center;
-	font-size:34px;
+	font-size:30px;
 	margin:40px 0;
 	color:#00aaff;
 	text-shadow: 1px 1px 1px black; 
@@ -17,7 +17,7 @@ h3
 .accueil
 {
 	margin:10px auto;
-	width:40%;
+	width:50%;
 	background-color: grey;
 	border-radius: 20px;
 }
@@ -35,7 +35,7 @@ h3
 .accueil article
 {
 	text-align:justify;
-	font-size:1.2rem;
+	font-size:1rem;
 	font-weight: bold;
 	color:white;
 	padding:10px 50px;
@@ -61,7 +61,7 @@ h3
 	background-repeat:  no-repeat;
 	background-size: cover;
 	margin:auto;
-	padding:30px;
+	padding:50px;
 	margin-bottom:20px;
 }
 
@@ -80,7 +80,7 @@ h3
 {
 	margin:auto;
 	margin-bottom: 20px;
-	font-size:1.1rem;
+	font-size:0.8rem;
 }
 
 .extrait h4
@@ -92,15 +92,14 @@ h3
 .suite
 {
 	background-color: #496672;
-	margin-left:40%;
 	padding:10px;
 	color:white;
 	text-decoration: none;
 	border-radius: 5px;
-	font-size:1rem;
+	font-size:0.8rem;
 }
 
-/*version smartphone*/
+/*version tablette et smartphone*/
 @media screen and (max-width: 880px) {
 	.wrapper
 	{

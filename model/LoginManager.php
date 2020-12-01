@@ -13,7 +13,7 @@ class LoginManager extends Database
     {
       $db = $this->getConnection();
       $check = false;
-      if (!empty($pseudo) && !empty($password))
+      if (!empty($pseudo) && !empty($password)  && !empty($password))
       {   
           $req = $db->prepare('SELECT id, password, type FROM user WHERE pseudo = :pseudo');
           $req-> execute(['pseudo' => $pseudo]);

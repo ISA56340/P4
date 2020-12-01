@@ -23,8 +23,8 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 					</a>
 				</div>
 				<div class="burger">
-					<button id="menu_burger"  title="ouvrir le menu">&#9776;</button> 
-	                <button id="croix_burger" title="fermer le menu">&#735;</button>  
+					<button id="croix_burger" title="fermer le menu">&#215;</button> 
+					<button id="menu_burger"  title="ouvrir le menu">&#9776;</button>  
 				</div>
 				<nav>
 					<ul>
@@ -64,8 +64,7 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 					<img src="public/images/logo_instagram.png" alt="logo_instagram">
 				</div>
 				<div class="infos">
-					<p>Contact</p>
-					<p>Politique de confidentialité</p>
+					<p><a href="#">Mentions légales</a></p>
 				</div>
 			</footer>
 		<script src="public/js/script.js"></script>
