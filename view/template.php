@@ -1,6 +1,5 @@
 <?php 
 if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas déjà présente
-     //echo "Vous êtes connecté!";
 }
 ?>
 
@@ -8,11 +7,24 @@ if(isset($_SESSION['connexion'])){ //pour vérifier qu'une session n'est pas dé
 <html lang="fr">
 	<head>
 		<meta charset="utf8">
-		<link rel="stylesheet" href="public/css/style.css"  type="text/css"/>
 		<meta name= "viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdn.tiny.cloud/1/vbl7evtg0dhgyajokozlbin5xayz3083upqby70jenjsq1oa/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
 		<title><?= $title ?></title>
+		<meta name="description" content="Dernier livre de Jean Forteroche publié en ligne"/>
+		<meta name="keywords" content="blog, roman,Jean Forteroche,Alaska, responsive design">
+		<!--opengraph_ref_facebook_linkedin-->
+		<meta property="og:title" content="Billet simple pour l'Alaska" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.surfing-web.com/Billet simple pour l'Alaska/" />
+		<meta property="og:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/images/logo.png" />
+		<meta property="og:description" content="Dernier roman de Jean Forteroche"/>
+		<!--twitter_cards_ref_twitter-->
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:site" content="@Billet simple pour l'Alaska"/>
+		<meta name="twitter:title" content="Billet simple pour l'Alaska"/>
+		<meta name="twitter:description" content="Dernier roman de Jean Forteroche"/>
+		<meta name="twitter:image" content="http://www.surfing-web.com/Billet simple pour l'Alaska/images/logo.png"/>
+		<link rel="stylesheet" href="public/css/style.css"  type="text/css"/>
 	</head>
 
 	<body>
