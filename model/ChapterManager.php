@@ -6,7 +6,7 @@ class ChapterManager extends Database
 {
      
 	
-	public function getChapters()//récupère la liste des chapitres
+	public function getChapters()//récupère les deux derniers chapitres 
 	{
 		$db = $this->getConnection();
         $result = $db->query('SELECT id, title, content, creation_date FROM chapter ORDER BY id DESC LIMIT 0,2');

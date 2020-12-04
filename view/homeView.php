@@ -22,19 +22,19 @@
         <div class="last_chapters">
             <h3>Derniers chapitres mis en ligne</h3>			
     		    <?php
-                foreach ($listChapters as $id => $chapter) {
+                foreach ($lastChapters as $id => $chapter) {
                 ?>  
                 <div class="extrait">
                     <p><span>Publié le : <?= htmlspecialchars($chapter['creation_date']);?></span></p>
                     <h4>Chapitre <?= htmlspecialchars($chapter['id']);?></h4>                  
                     <h2><a href="index.php?action=chapter&amp;chapterId=<?= $chapter['id'] ?>"><?= htmlspecialchars ($chapter['title']);?></a></h2> 
                     <p><?= nl2br(substr($chapter['content'], 0,100));?></p>
-                    <a href="index.php?action=chapter&amp;chapterId=<?= $chapter['id'] ?>"class="suite">Lire la suite...</a> <!---on a rediriger vers le bon url via le routeur pour voir le chapitre en entier--->
+                    <a href="index.php?action=chapter&amp;chapterId=<?= $chapter['id'] ?>"class="suite">Lire la suite...</a>
                 </div>                    
                 <?php
                 }
        			
-        		$listChapters->closeCursor();
+        		$lastChapters->closeCursor();
        			?>
     	</div>
     </div>

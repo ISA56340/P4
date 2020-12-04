@@ -1,21 +1,17 @@
 <?php
-//namespace JF\Blog\controller;
 
 require_once('model/ChapterManager.php');
 require_once('model/CommentManager.php');
 
 
-//use JF\Blog\model\ChapterManager;
-//use JF\Blog\model\CommentManager;
-
 class ChapterController
 {
 
-/*recupère tous les chapitres et affiche un extrait de chacun*/
+/*recupère tous les chapitres pour afficher les deux derniers*/
 	function lastChapters()
 	{
 		$chapterManager = new ChapterManager();
-    	$listChapters = $chapterManager->getChapters();//appel de la méthode
+    	$lastChapters = $chapterManager->getChapters();//appel de la méthode
 
 		require_once('view/homeView.php');
 	}

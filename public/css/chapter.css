@@ -19,7 +19,7 @@ h4
 {
 	border: 20px solid #fff;
 	width:70%;
-	background-image: url("../images/fond.png");
+	background-color:#f6f6f6;
 	padding:10px;
 	margin:auto;
 	border-radius: 10px;
@@ -84,9 +84,25 @@ h4
 	margin-top: 20px;
 }
 
+.ajoutcomment
+{
+	font-size:1.4rem;
+}
 .contenu:hover
 {
 	background-color: white;
+}
+
+.info
+{
+	background-color:white;
+	padding:10px;
+	border-radius:10px;
+}
+.info span
+{
+	font-size:1.4rem;
+	color:red;
 }
 
 /*version tablettePortrait*/

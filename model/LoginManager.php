@@ -45,7 +45,6 @@ class LoginManager extends Database
   } 
 
    public function signinCheck($pseudo, $password) {
-    // Insertion
       $hashpass = password_hash($password, PASSWORD_DEFAULT);
       $db = $this->getConnection();
       $req = $db->prepare('INSERT INTO user(pseudo, password,creation_date) VALUES(:pseudo, :password, NOW())');

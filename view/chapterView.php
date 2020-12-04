@@ -18,6 +18,12 @@
 		<div class="commentaires">
             <div class="comments">
 			    <h3>Commentaires</h3>
+
+                <div class="your_comment">
+                    <?php if(isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 0): ?>
+                         <a href="index.php?action=addComment&amp;chapterId=<?= $_GET['chapterId']?>" class="ajoutcomment">Ajouter un commentaire</a>
+                    <?php endif; ?> 
+                </div>
                  <p class="info">Si vous souhaitez signaler ou ajouter un commentaire, vous pouvez vous connecter ou créer votre espace <a href="index.php?action=connection"><span>ici</span></a></p>
                 <?php
                 foreach ($comments as $id=>$comment){
@@ -34,12 +40,6 @@
                 $comments->closeCursor();
                 ?>
             </div>   
-		
-    		<div class="your_comment">
-                <?php if(isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 0): ?>
-    			     <a href="index.php?action=addComment&amp;chapterId=<?= $_GET['chapterId']?>" class="ajoutcomment">Ajouter un commentaire</a>
-                <?php endif; ?> 
-    		</div>
         </div>
 		
 		<?php $content = ob_get_clean(); ?>
