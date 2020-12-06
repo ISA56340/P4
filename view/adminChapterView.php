@@ -13,15 +13,9 @@
       <input type="submit" class="actualiser" value="Actualiser"/> 
     </form>
   </section>
-
-  <section class="gestion_com">
-    
-  </section>
-  		
-  		
-<script src="public/js/textEditor.js"></script> 
+		
+  <script src="public/js/textEditor.js"></script> 
 
 <?php $content = ob_get_clean(); ?>
-
 
 <?php require('template.php'); ?>

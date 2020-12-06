@@ -22,8 +22,7 @@ class LoginController
 			}
 			else{
 				throw new Exception("vos mots de passe ne sont pas identiques");
-			}
-			
+			}	
 		}
 	}
 
@@ -32,14 +31,10 @@ class LoginController
 		if(isset($pseudo) && isset($password)) {
 			
 			$loginManager = new LoginManager;
-			try {
-				$check = $loginManager->loginCheck($pseudo, $password);
-			} catch (Exception $e) {
-				echo 'Erreur :' .$e->getMessage();
-			}
+			$check = $loginManager->loginCheck($pseudo, $password);
 	    	if($check)
 	    	{	
-	        	$_SESSION['connexion'] = $_POST['pseudo'] ;
+	        	$_SESSION['connexion'] = $pseudo;
 	        	if($_SESSION['user_type'] == 1) {
 	        		header("Location:index.php?action=admin");
 	        	} else {
@@ -59,10 +54,7 @@ class LoginController
 	   			$_SESSION['alert'] = "Identifiant ou mot de passe incorrect";
 	   			header("Location:index.php?action=connection");
 	   		}
-		} else {
-			$_SESSION['alert'] = "Identifiant ou mot de passe incorrect";
 		}
-
 	}
 
 	function admin()

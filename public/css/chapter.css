@@ -86,12 +86,52 @@ h4
 
 .ajoutcomment
 {
-	font-size:1.4rem;
+	font-size:1.3rem;
+	background-color: yellow;
+	border-radius:10px;
+	color:black;
+	padding:10px;
 }
+
 .contenu:hover
 {
 	background-color: white;
 }
+
+/*ajouter un com*/
+.insertcomment
+{
+	width:50%;
+	margin:auto;
+}
+
+.insertcomment form
+{
+	padding:30px;
+}
+
+.insertcomment .envoyer
+{
+	background-color: #496672;
+	margin-left:70%;
+	padding:10px;
+	color:white;
+	text-decoration: none;
+	border-radius: 5px;
+	cursor:pointer;
+}
+
+.insertcomment .author, .insertcomment .commentaire
+{
+	font-size:1.2rem;
+}
+
+.insertcomment input, .insertcomment textarea
+{
+	font-size:1.1rem;
+	padding:10px;
+}
+
 
 .info
 {

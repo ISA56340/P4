@@ -12,10 +12,9 @@
 					<input type="text" id="comment" name="comment" rows="6" cols="60" value="<?= htmlspecialchars($comment['comment']) ?>"/><br/>
 				</div>
 					<input type="submit" class="update" value="Mettre à jour"/>
-
 			</form>	
 		</div>
-	
-	<?php $content = ob_get_clean(); ?>
 	</section>
+<?php $content = ob_get_clean(); ?>
+	
 <?php require('template.php'); ?>

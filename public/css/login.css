@@ -4,13 +4,15 @@
 	font-size:1.2rem;
 	text-align:center;
 	width:90%;
-	margin:auto;
+	margin:50px auto;
+	display:flex; 
+	flex-wrap: wrap;
 }	
 
 form
 {
-	width:100%;
-	text-align:center;
+	width:50%;
+	display:block;
 }
 
 
@@ -24,10 +26,10 @@ form
 
 #formulaire input
 {
-	width:30%;
+	width:50%;
 	height:48px;
 	border-radius: 10px;
-	font-size: 1.2rem;
+	font-size: 0.9rem;
 	padding-left:10px;
 }
 
@@ -121,8 +123,8 @@ form
 {
 	padding:10px;
 	text-decoration: none;
-	background-color: #00aaff;
-	color:white;
+	background-color: yellow;
+	color:black;
 	display:block;
 	width:50%;
 	margin:10px auto;
@@ -152,8 +154,7 @@ form
 #modifComment input
 {
 	width:80%;
-	padding:30px;
-	font-size:1rem;
+	padding:20px;
 }
 
 .update
@@ -226,6 +227,7 @@ form
 		margin:auto;
 		width:80%;
 	}
+
 
 	#formulaire input
 	{

@@ -2,7 +2,7 @@ h3
 {
 	text-align: center;
 	font-size:30px;
-	margin:40px 0;
+	margin:40px 20px;
 	color:#00aaff;
 	text-shadow: 1px 1px 1px black; 
 }
@@ -106,11 +106,7 @@ h3
 		display:block;
 	}
 
-	h1
-	{
-		font-size:40px;
-	}
-
+	
 	.accueil, .last_chapters
 	{
 		width:90%;
@@ -119,7 +115,6 @@ h3
 
 	.extrait, .accueil article
 	{
-		width:70%;
 		font-size:1rem;
 		text-align:left;
 	}

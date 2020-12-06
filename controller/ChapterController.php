@@ -25,18 +25,6 @@ class ChapterController
 		require_once('view/allChaptersView.php');
 	}
 
-	function adminUpdateChapter()
-	{
-		if($_SESSION['user_type'] == 1) {
-			$chapterManager = new ChapterManager();
-	    	$allChapters = $chapterManager->getAdminChapters();
-
-			require_once('view/adminView.php');
-		} else {
-    		header("Location:index.php?action=allChapters");
-    	}
-	}
-
 /*afficher un chapitre et commentaires associés*/	
 	function chapter($chapterId)
 	{
@@ -45,7 +33,6 @@ class ChapterController
 
 		$chapter = $chapterManager->getChapter($chapterId);
 		$comments = $commentManager->getComments($chapterId);
-		//var_dump($comments);
 		require_once('view/chapterView.php');
 	}
 
@@ -86,7 +73,6 @@ class ChapterController
 		if($_SESSION['user_type'] == 1) {
     		$chapterManager = new ChapterManager();
 	    	$chapter = $chapterManager->getChapter($chapterId);	
-			//var_dump($_GET['chapterId']);
 	    	require_once('view/adminChapterView.php');
     	} else {
     		header("Location:index.php?action=allChapters");

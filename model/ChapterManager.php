@@ -16,7 +16,7 @@ class ChapterManager extends Database
     public function getAllChapters()//récupère la liste des chapitres
     {
         $db = $this->getConnection();
-        $result = $db->query('SELECT id, title, content, creation_date FROM chapter ORDER BY id DESC');
+        $result = $db->query('SELECT id, title, content, creation_date FROM chapter');
         return $result;
     }
 
@@ -48,13 +48,11 @@ class ChapterManager extends Database
         $result->execute(array( $chapterId));
         
         return $result; 
-
     }
 
 
 	  public function updateChapter($title,$content,$chapterId)//modifier un chapitre
-    {	
-        
+    {	  
        	$db = $this->getConnection();
         $result = $db->prepare('UPDATE chapter SET title=:title, content=:content WHERE id=:id');
         
@@ -63,8 +61,7 @@ class ChapterManager extends Database
                     'content' => $content,
                     'id' => $chapterId
                     ));
-        									                   							
-        
+
        return $result;
     }	
 

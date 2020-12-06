@@ -4,7 +4,6 @@ function hamburger(){
 	let nav=document.querySelector("nav");
 
   menu_burger.addEventListener('click',()=>{
-
 		if(menu_burger){
 		  	menu_burger.style.display="none";
 		  	croix_burger.style.display="block";

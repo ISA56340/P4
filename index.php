@@ -4,13 +4,9 @@ require_once ('controller/ChapterController.php');
 require_once ('controller/CommentController.php');
 require_once ('controller/LoginController.php');
 //centralise l'appel des requêtes 
-
-
-
-     
+    
         try{
-
-             if(isset($_GET['action']))
+            if(isset($_GET['action']))
             {
                 if($_GET['action'] === 'lastChapters'){
                     $chapterController = new ChapterController();

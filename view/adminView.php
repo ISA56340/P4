@@ -10,21 +10,18 @@
        
       </div>
 
-       <div>
-        <a href="index.php?action=allChapters">Supprimer un chapitre <img src="public/images/poubelle.png" alt="croix pour supprimer"></a>
-       
+      <div>
+        <a href="index.php?action=allChapters">Supprimer un chapitre <img src="public/images/poubelle.png" alt="croix pour supprimer"></a>       
       </div>
 
-       <div>
-        <a href ="index.php?action=newChapter">Nouveau chapitre<img src="public/images/plume.png" alt="plume dans un encrier"></a>
-        
+      <div>
+        <a href ="index.php?action=newChapter">Nouveau chapitre<img src="public/images/plume.png" alt="plume dans un encrier"></a>        
       </div>
 
-       <div>
-        <a href ="index.php?action=allComments">Commentaires signalés <img src="public/images/attention.png" alt="symbole point exclamation"></a>
-       
+      <div>
+        <a href ="index.php?action=allComments">Commentaires signalés <img src="public/images/attention.png" alt="symbole point exclamation"></a>       
       </div>
-    </section>
+  </section>
 
 <?php $content = ob_get_clean(); ?>
 
